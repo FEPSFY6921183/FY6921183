@@ -116,7 +116,7 @@
 
       
 <h3 id="Historical context">Historical Context</h3>
-  <p style="font-family: Verdana; width 1100px; text-alighn: justify;">
+  <p id="Historical_InText" style="font-family: Verdana; width 1100px; text-alighn: justify;">
       The Concorde was developed by British and French aerospace companies and entered service in 1976. Concorde faced challenges when 
       in service due to high ticket price and many environmental concerns. In 2000 Concordes crash provided a pivotal moment to accelerates 
       Concordes retirement in 2003, where Flight 4590 struck debris on the runway, rupturing a fuel tank causing it to crash into a nearby 
@@ -126,7 +126,7 @@
 
       
 <h3 id="Reasons for Ban">Reasons For The Ban</h3>
-       <p style="font-family: Verdana; width 1100px; text-alighn: justify;">
+       <p id="Resons_InText" style="font-family: Verdana; width 1100px; text-alighn: justify;">
       Sonic Booms: 
 
       Supersonic aircrafts generate sonic booms, the air gets compressed behind the plane causing a area of high pressure sound waves radiating 
@@ -151,7 +151,7 @@
        </p>
 
 <h3 id="Boomless Cruise Technology">Boomless Cruise Technology</h3>
-      <p style="font-family: Verdana; width 1100px; text-alighn: justify;">
+      <p id="Boomless_InText" style="font-family: Verdana; width 1100px; text-alighn: justify;">
       Boomless Cruise an American company with new technology that aims to eliminate the disruptive sonic booms. They have achieved this by using 
       Mach Cutoff, atmospheric refraction prevents sonic booms from reaching the ground. They achieve this by flying at specific speeds and attitudes, 
       enabling supersonic travel without communities being disturbed as the shock waves dissipate before reaching the ground. 
@@ -168,8 +168,7 @@
       </p>
   
   <h3 id="Analysis">Analysis</h3>
-    <pre id="Analysis_InText">
-       <p style="font-family: Verdana; width 1100px; text-alighn: justify;">
+       <p id="Analysis_InText" style="font-family: Verdana; width 1100px; text-alighn: justify;">
       While Mach cutoff can eliminate sonic booms under certain atmospheric conditions it is not guaranteed at all times. Variations in altitude, weather, and 
       geography can still produce audible disturbances. Due to this authorities will likely demand extensive testing before approving full operations. Although 
       Symphony engines are designed for efficiency, supersonic travel will still consume more fuel than a standard commercial flight. Therefore questions remain 
@@ -178,7 +177,7 @@
        </p>
 
   <h3 id="Conclusion">Conclusion</h3>
- <p style="font-family: Verdana; width 1100px; text-alighn: justify;">
+ <p id="Conclusion_InText" style="font-family: Verdana; width 1100px; text-alighn: justify;">
     Due to noise pollution, environmental harm, its economic issues and the evident safety concerns caused by the 2000 crash, the ban on supersonic flight was 
     necessary as Concorde demonstrated the risks of supersonic flight without addressing safety and sustainability. Whereas boomless cruise represents the future 
     of supersonic flight offering the same faster travel with reduced impact on communities and peoples lives. This means that supersonic travel is possible with 
@@ -280,6 +279,7 @@
 <p id="totalWordCount"></p>
 
 <script>
+  <hr>
   // Function to calculate and display word count for a specified section
   function displayWordCount(sectionId, outputId) {
     // Get the text content from the specified section
@@ -295,9 +295,13 @@
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_InText");
+    const HistoricalCount = displayWordCount("Historical_InText");
+    const ReasonsCount = displayWordCount("Reasons_InText");
+    const BoomlessCount = displayWordCount("Boomless_InText");
     const AnalysisCount = displayWordCount("Analysis_InText");
+    const ConclusionCount = displayWordCount("Conclusion_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const totalWordCount = IntroductionCount + HistoricalCount + ReasonsCount + BoomlessCount + AnalysisCount + ConclusionCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
