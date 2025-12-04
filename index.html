@@ -303,10 +303,14 @@
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_InText");
-     const HistoricalCount = displayWordCount("Historical_InText");
+    const HistoricalCount = displayWordCount("Historical_InText");
+    const ReasonsCount = displayWordCount("Reasons_InText");
+    const BoomlessCount = displayWordCount("Boomless_InText");
+    const AnalysisCount = displayWordCount("Analysis_InText");
+    const ConclusionCount = displayWordCount("Conclusion_InText");
 
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + HistoricalCount;
+    const totalWordCount = IntroductionCount + HistoricalCount + ReasonsCount + BoomlessCount + AnalysisCount + ConclusionCount;
   
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
