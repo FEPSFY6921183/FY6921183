@@ -341,9 +341,10 @@ Hosch, L (No Date) Sonic boom, Britannica <a href="https://www.britannica.com/sc
     const BoomlessCount = displayWordCount("Boomless_InText");
     const AnalysisCount = displayWordCount("Analysis_InText");
     const ConclusionCount = displayWordCount("Conclusion_InText");
+    const Figure1Count = displayWordCount("fig1");
 
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + HistoricalCount + ReasonsCount + BoomlessCount + AnalysisCount + ConclusionCount;
+    const totalWordCount = IntroductionCount + HistoricalCount + ReasonsCount + BoomlessCount + AnalysisCount + ConclusionCount + Figure1Count;
   
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
